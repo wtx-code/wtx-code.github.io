@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STM32F103 流水灯踩坑记 | wutenxin.com</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<main class="container">
+<article class="post">
+<a class="back" href="../index.html">← 返回首页</a>
+<h1>STM32F103 流水灯踩坑记</h1>
+<div class="meta">2026-10-20 · 技术</div>
+<p>手头一块 STM32F103ZE 的大板子，用 Keil MDK-ARM + 标准外设库做了个流水灯。过程记一下，方便以后翻。</p>
+<h2>几个坑</h2>
+<p>1. 时钟没使能：RCC_APB2PeriphClockCmd 忘了写，GPIO 配置全白搭。</p>
+<p>2. 复制工程后没重新选芯片型号，编译一堆报错。</p>
+<p>3. 下载器选错成 ST-Link 但实际用的串口，卡了半天。</p>
+<h2>心得</h2>
+<p>先跑通最小工程再往上加东西，别一次抄一大段代码。</p>
+</article>
+</main>
+</body>
+</html>

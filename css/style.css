@@ -1,0 +1,55 @@
+:root {
+  --bg: #f7f8fa;
+  --card: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --accent: #3b82f6;
+  --line: #e5e7eb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+  background: var(--bg); color: var(--ink); line-height: 1.7;
+}
+.container { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+.site-header {
+  background: var(--card); border-bottom: 1px solid var(--line);
+  position: sticky; top: 0; z-index: 10;
+}
+.site-header .container { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 20px; font-weight: 700; color: var(--ink); text-decoration: none; }
+.logo .dot { color: var(--accent); }
+nav a { margin-left: 24px; color: var(--muted); text-decoration: none; font-size: 15px; }
+nav a:hover { color: var(--accent); }
+
+.hero { padding: 64px 0 40px; }
+.hero h1 { font-size: 32px; margin-bottom: 12px; }
+.hero p { color: var(--muted); font-size: 17px; }
+
+.section-title { font-size: 20px; margin: 32px 0 16px; padding-left: 12px; border-left: 4px solid var(--accent); }
+
+.post-list { display: grid; gap: 16px; }
+.post-card {
+  display: block; background: var(--card); border: 1px solid var(--line);
+  border-radius: 12px; padding: 20px 24px; text-decoration: none; color: var(--ink);
+  transition: box-shadow .2s, transform .2s;
+}
+.post-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.08); transform: translateY(-2px); }
+.post-date { font-size: 13px; color: var(--accent); }
+.post-card h3 { margin: 6px 0; font-size: 18px; }
+.post-card p { color: var(--muted); font-size: 14px; }
+
+.about-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  padding: 24px; color: var(--muted);
+}
+
+.site-footer { margin-top: 64px; padding: 24px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; text-align: center; }
+
+article.post { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 40px; margin: 40px 0; }
+article.post h1 { font-size: 26px; margin-bottom: 8px; }
+article.post .meta { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+article.post p { margin: 14px 0; }
+article.post h2 { font-size: 20px; margin: 24px 0 8px; }
+.back { display: inline-block; margin-bottom: 20px; color: var(--accent); text-decoration: none; font-size: 14px; }
