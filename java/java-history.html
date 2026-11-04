@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java 历史 - Java 教程 - 吴腾鑫的官方网站</title>
+<link rel="icon" type="image/png" href="../3.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="../index.html">
+      <img class="logo-img" src="../3.png" alt="一二头像 logo">
+      <span>吴腾鑫的官方网站<span class="dot"></span></span>
+    </a>
+    <nav>
+      <a href="index.html" style="color:#000000">Java教程</a>
+      <a href="../index.html#about">C语言教程</a>
+      <a href="../index.html#about">Python教程</a>
+    </nav>
+  </div>
+</header>
+
+<div class="tutorial-wrap">
+  <aside class="tutorial-nav">
+    <h4>Java 教程</h4>
+    <a href="index.html">快速入门</a>
+    <a href="java-intro.html">Java 简介</a>
+    <a href="java-history.html" class="active">Java 历史</a>
+    <a href="env-setup.html">搭建开发环境</a>
+  </aside>
+  <article class="tutorial-main">
+    <div class="crumb">Java 教程 / Java 历史</div>
+    <h1>Java 历史</h1>
+<p>Java 最早由 SUN 公司（现已被 Oracle 收购）的詹姆斯·高斯林（James Gosling，人称“高司令”，被誉为 Java 之父）于 20 世纪 90 年代初开发。它最初被命名为 Oak，目标是为小型家电设备提供嵌入式解决方案，但市场反响平平。出乎意料的是，互联网的崛起让 Oak 重获生机：SUN 对 Oak 加以改造，于 1995 年以 Java 之名正式发布。由于 Oak 这一名称已被他人注册，SUN 转而注册了 Java 商标。随着互联网高速发展，Java 逐渐成为最重要的网络编程语言。</p>
+<p>Java 介于编译型语言和解释型语言之间。C、C++ 等编译型语言将源码直接编译为机器码执行，但 x86、ARM 等平台的 CPU 指令集各不相同，因此每个平台都必须单独编译出对应的机器码；Python、Ruby 等解释型语言没有这一负担，由解释器直接加载源码运行，代价是执行效率偏低。Java 的做法是将源码编译成“字节码”——一种类似抽象 CPU 指令的中间形式，再针对不同平台提供虚拟机，由各平台的虚拟机负责加载和执行字节码，从而实现“一次编写，到处运行”。当然，这一优势只对 Java 开发者成立：虚拟机本身仍需按平台分别开发。为确保不同平台、不同厂商的虚拟机都能正确执行 Java 字节码，SUN 制定了一系列 Java 虚拟机规范。从实践来看，JVM 的兼容性相当出色，低版本编译出的字节码完全可以运行在高版本的 JVM 上。</p>
+<p>随着 Java 的发展，SUN 将其划分为三个版本：</p>
+<ul><li><b>Java SE</b>：Standard Edition，标准版</li><li><b>Java EE</b>：Enterprise Edition，企业版</li><li><b>Java ME</b>：Micro Edition，微型版</li></ul>
+<p>三者的关系如下：</p>
+<pre><code>┌───────────────────────────┐
+│Java EE                    │
+│    ┌────────────────────┐ │
+│    │Java SE             │ │
+│    │    ┌─────────────┐ │ │
+│    │    │   Java ME   │ │ │
+│    │    └─────────────┘ │ │
+│    └────────────────────┘ │
+└───────────────────────────┘</code></pre>
+<p>简单来说，Java SE 是标准版，包含标准的 JVM 与标准库；Java EE 是企业版，在 Java SE 的基础上增加了大量 API 和库，便于开发 Web 应用、数据库、消息服务等，其应用使用的虚拟机与 Java SE 完全相同。Java ME 则与 Java SE 不同，它是面向嵌入式设备的“瘦身版”，Java SE 的标准库无法在 Java ME 上使用，其虚拟机同样是“瘦身版”。</p>
+<p>毫无疑问，Java SE 是整个 Java 平台的核心，Java EE 则是进一步学习 Web 应用的必经之路——熟悉的 Spring 等框架都属于 Java EE 开源生态的一部分。遗憾的是，Java ME 始终未能真正流行起来，反而是 Android 开发成为移动平台的主流选择之一，因此没有特殊需求，不建议学习 Java ME。</p>
+<p>基于以上划分，推荐的 Java 学习路线如下：</p>
+<ul><li>首先学习 <b>Java SE</b>，掌握 Java 语言本身、核心开发技术以及标准库的使用；</li><li>若继续深入 <b>Java EE</b>，则需要学习 Spring 框架、数据库开发和分布式架构；</li><li>若转向<b>大数据开发</b>，则需要学习 Hadoop、Spark、Flink 等大数据平台，它们均基于 Java 或 Scala 开发；</li><li>若从事<b>移动开发</b>，则需深入 Android 平台，掌握 Android App 开发。</li></ul>
+<p>无论选择哪个方向，Java SE 的核心技术都是基础。本教程的目标，就是帮助读者精通 Java SE 并掌握 Java EE。</p>
+<h2>Java 版本</h2>
+<p>Java 自 1996 年发布 1.0 版本起，至今已迭代到 Java 25：</p>
+<table><tr><th>时间</th><th>版本</th><th>时间</th><th>版本</th></tr><tr><td>1996</td><td>1.0</td><td>2018/3</td><td>10</td></tr><tr><td>1997</td><td>1.1</td><td>2018/9</td><td>11</td></tr><tr><td>1998</td><td>1.2</td><td>2019/3</td><td>12</td></tr><tr><td>2000</td><td>1.3</td><td>2019/9</td><td>13</td></tr><tr><td>2002</td><td>1.4</td><td>2020/3</td><td>14</td></tr><tr><td>2004</td><td>1.5 / 5.0</td><td>2020/9</td><td>15</td></tr><tr><td>2005</td><td>1.6 / 6.0</td><td>2021/3</td><td>16</td></tr><tr><td>2011</td><td>1.7 / 7.0</td><td>2021/9</td><td>17</td></tr><tr><td>2014</td><td>1.8 / 8.0</td><td>2022/3</td><td>18</td></tr><tr><td>2017/9</td><td>1.9 / 9.0</td><td>2022/9</td><td>19</td></tr><tr><td></td><td></td><td>2023/3</td><td>20</td></tr><tr><td></td><td></td><td>2023/9</td><td>21</td></tr><tr><td></td><td></td><td>2024/3</td><td>22</td></tr><tr><td></td><td></td><td>2024/9</td><td>23</td></tr><tr><td></td><td></td><td>2025/3</td><td>24</td></tr><tr><td></td><td></td><td>2025/9</td><td>25</td></tr></table>
+<p>本教程使用最新版的 Java 25。</p>
+<h2>名词解释</h2>
+<p>初学 Java 时常会听到 JDK、JRE 等名词，它们究竟是什么？</p>
+<ul><li><b>JDK</b>：Java Development Kit，Java 开发工具包</li><li><b>JRE</b>：Java Runtime Environment，Java 运行环境</li></ul>
+<p>简单地说，JRE 就是运行 Java 字节码的虚拟机。但若只有 Java 源码，要将其编译成字节码，就必须使用 JDK——因为 JDK 除包含 JRE 外，还提供了编译器、调试器等开发工具。</p>
+<p>二者的关系如下：</p>
+<pre><code>  ┌─    ┌──────────────────────────────────┐
+  │     │     Compiler, debugger, etc.     │
+  │     └──────────────────────────────────┘
+ JDK ┌─ ┌──────────────────────────────────┐
+  │  │  │                                  │
+  │ JRE │      JVM + Runtime Library       │
+  │  │  │                                  │
+  └─ └─ └──────────────────────────────────┘
+        ┌───────┐┌───────┐┌───────┐┌───────┐
+        │Windows││ Linux ││ macOS ││others │
+        └───────┘└───────┘└───────┘└───────┘</code></pre>
+<p>因此，从事 Java 开发，安装 JDK 是必要的第一步。</p>
+<p>那么，JSR、JCP 又是什么？</p>
+<ul><li><b>JSR</b>：Java Specification Request，Java 规范请求</li><li><b>JCP</b>：Java Community Process，Java 社区进程</li></ul>
+<p>为保证 Java 语言的规范性，SUN 建立了 JSR 机制：任何为 Java 平台新增的功能（例如访问数据库），都必须先提出 JSR 规范并定义好接口。这样一来，各数据库厂商按规范实现 Java 驱动程序，开发者便不必担心自己的数据库代码只能在 MySQL 上运行、却无法在 PostgreSQL 上运行。</p>
+<p>因此，JSR 是一系列规范，从 JVM 内存模型到 Web 程序接口，均已被标准化；而负责审核 JSR 的组织正是 JCP。</p>
+<p>一个 JSR 规范发布时，为便于参考，还需同时提供“参考实现”与“兼容性测试套件”：</p>
+<ul><li><b>RI</b>：Reference Implementation，参考实现</li><li><b>TCK</b>：Technology Compatibility Kit，兼容性测试套件</li></ul>
+<p>例如有人提议开发一个基于 Java 的消息服务器，提议本身固然重要，但仅有提议还不够，必须给出真正能运行的代码，这就是 RI。若其他人也想开发同类消息服务器，如何保证这些产品对开发者而言接口与功能一致？这就需要 TCK 来验证。</p>
+<p>通常情况下，RI 只是一份“能跑通”的正确代码，并不追求性能，因此真正选型一款 Java 消息服务器时，一般不会选用 RI，而是选择具有竞争力的商用或开源产品。</p>
+<p>参考：Java 消息服务 JMS 的 JSR：<a href="https://jcp.org/en/jsr/detail?id=914" target="_blank"><img src="https://jcp.org/favicon.ico" alt="img">JSR 914: JavaTM Message Service (JMS) API</a></p>
+<p>参考：Java历史廖雪峰<a href="https://liaoxuefeng.com/books/java/quick-start/history/index.html" target="_blank">Java历史 - Java教程 - 廖雪峰的官方网站</a></p>
+    <div class="pager">
+<a href="java-intro.html">← 上一篇：Java 简介</a>
+<a href="env-setup.html">下一篇：搭建开发环境 →</a>
+    </div>
+  </article>
+</div>
+
+<footer class="site-footer">
+  <div class="container">© 2026 wutenxin.com · 用热爱驱动</div>
+</footer>
+</body>
+</html>
