@@ -288,14 +288,6 @@ article.post h2 { font-size: 20px; margin: 24px 0 8px; }
   padding: 44px 0 4px;
 }
 
-.hero-avatar {
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--card);
-  box-shadow: 0 4px 14px rgba(31, 41, 55, .12);
-}
 
 .hero h1 { font-size: 26px; margin-bottom: 4px; }
 .hero p { color: var(--muted); font-size: 15px; }
